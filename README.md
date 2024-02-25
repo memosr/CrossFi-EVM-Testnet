@@ -39,7 +39,7 @@ git clone https://github.com/crossfichain/testnet.git
 ./bin/crossfid --home ./testnet keys add my_validator
 ```
 
-###  Test cüzdanını ekleme
+###  Daha önceden oluşturduğunuz cüzdanı eklemek istiyorsan bu kodu kullandıktan sonra seed kelimelerini yaz şifre belirle - If you want to add the wallet you have already created, use this code, then type the seed words and set a password.
 
 > Burada, Başvuru yaparken veya maille token istediğiniz cüzdanı, node içine aktaracağız.
 
