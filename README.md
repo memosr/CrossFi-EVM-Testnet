@@ -53,9 +53,7 @@ crossfid keys add $WALLET --recover
 
 ### Senkronizasyon Kontrolü
 
-![Ekran görüntüsü 2024-02-25 004315](https://github.com/CoinHuntersTR/Babylon-Testnet3/assets/111747226/16dd6048-6700-4bf4-b6d7-fd037f5331f0)
-
-> Komut sonrasında `false` çıktısı aldığınızda Validator kurulumuna geçebilirsiniz.
+> When you get `false` output after the command, you can proceed with the Validator installation - Komut sonrasında `false` çıktısı aldığınızda Validator kurulumuna geçebilirsiniz
 
 ```
 crossfid status 2>&1 | jq .SyncInfo
@@ -63,11 +61,11 @@ crossfid status 2>&1 | jq .SyncInfo
 
 ## 2) Validator Çalıştırma
 
-> `moniker` yazan yere tırnaklar içinde Validator isminizi yazıyoruz.
+> Write your Validator name in quotes where `moniker` is written - `moniker` yazan yere tırnaklar içinde Validator isminizi yazıyoruz
 
-> `details` yazan yere tırnaklar içinde istediğiniz bir şey yazabilirsiniz.
+> You can write anything you want in quotes where it says `details` - `details` yazan yere tırnaklar içinde istediğiniz bir şey yazabilirsiniz
 
->  `website` yazan yere twitter yada github linkinizi ekleyebilirsiniz.
+> You can add your twitter or github link where it says `website` - `website` yazan yere twitter yada github linkinizi ekleyebilirsiniz
 
 
 ```
@@ -81,39 +79,16 @@ crossfid tx staking create-validator \
 --pubkey $(crossfid tendermint show-validator) \
 --moniker "" \
 --website "" \
---details "CoinHunters Community" \
+--details "memosr Community" \
 --chain-id crossfi-evm-testnet-1 \
 --gas auto --gas-adjustment 1.5 --gas-prices 10000000000000mpx \
 -y
 ```
 
-### Kendi Validatorüne Token delege etme
 
-> `cüzdanismi` yerine kendi verdiğiniz ismi yazmanız gerekiyor.
+## 3) Validator Bilgilerini Güncelleme
 
-> 1MPX = 1000000000000000000mpx  yapıyor, yani 18 tane 0 var. Ona göre cüzdanınızdan, kendi validatörünüze delege edebilirsiniz.
-
-```
-crossfid tx staking delegate $(crossfid keys show cüzdanismi --bech val -a) 9000000000000000000000mpx --from cüzdanismi --chain-id crossfi-evm-testnet-1 --gas-adjustment 1.5 --gas auto --gas-prices 10000000000000mpx -y
-```
-### Explorer
-
-> [BURADAN](https://testnet.itrocket.net/crossfi) explorer ulaşarak, blok sayısını ve kendi validatorünüzü görebilirsiniz.
-
-## 3) Yedek Alma
-
-> Sunucuna bir şey oldu. Hetzner kapattı. Yada yanlışlıkla sildiniz. Size lazım olan dosyayı yedekledikten sonra sorun yok.
-
-> Nasıl yedekliyoruz? Cosmos projelerinde bir tane dosyayı bilgisayarınıza indirdiğinizde işlem tamamdır.  `priv_validator_key.json` dosyasını indirmemiz gerekiyor.
-
-> Bunun için winscp veya mobaxterm kullanabilirsiniz.
-
-> Dosya yolu bu şekildedir;  `/root/.mineplex-chain/config/priv_validator_key.json` bu dosyayı bir yere kayıt etmeyi unutmayın.
-
-
-## 4) Validator Bilgilerini Güncelleme
-
-> Buradaki bilgileri güncelleyerek Validator Adınızı ve diğer değişiklikleri yapabilirsiniz.
+> You can update the information here to change your Validator Name and other changes - Buradaki bilgileri güncelleyerek Validator Adınızı ve diğer değişiklikleri yapabilirsiniz
 
 ```
 crossfid tx staking edit-validator \
@@ -127,7 +102,4 @@ crossfid tx staking edit-validator \
 --gas auto --gas-adjustment 1.5 --gas-prices 10000000000000mpx \
 -y
 ```
-### Validatore Resim ekleme;
-
-> [BURADAN](https://keybase.io/) keybase sitesine gidin, kayıt olup resminizi yükleyip adımları takip edin. size `F0F603C1097C160F` benzer ifade verecek, onu `identity` ID olarak eklerseniz validator resminiz görünür.
 
