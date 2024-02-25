@@ -1,4 +1,4 @@
-<h1 align="center">CrossFi Testnet Kurulumu
+<h1 align="center">CrossFi Testnet Setup - CrossFi Testnet Kurulumu
   
 <br/><br>
 ![lava-network-testnet-rehberi](https://pbs.twimg.com/profile_banners/1681767569823334401/1698851466/1500x500)
