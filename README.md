@@ -1,1 +1,0 @@
-# CrossFi-EVM-Testnet
