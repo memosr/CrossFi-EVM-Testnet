@@ -4,9 +4,9 @@
 ![lava-network-testnet-rehberi](https://pbs.twimg.com/profile_banners/1681767569823334401/1698851466/1500x500)
 
 ## Sistem gereksinimleri:
-NODE TİPİ | CPU     | RAM      | SSD     |
+NODE TİPİ - NODE TYPE | CPU     | RAM      | SSD     |
 | ------------- | ------------- | ------------- | -------- |
-| CrossFi | 4          | 8         | 160  |
+| CrossFi | 4          | 16         | 300  |
 
 
 ## 1) Kurulum
