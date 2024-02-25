@@ -9,17 +9,34 @@ NODE TİPİ - NODE TYPE | CPU     | RAM      | SSD     |
 | CrossFi | 4          | 16         | 300  |
 
 
-## 1) Kurulum
+## 1) Kurulum - Setup
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
-### Otomatik script çalıştırıp sizden istenen cüzdan ve Validator ismini giriyorsunuz.
+### From snapshot (fast) 
 
-> Port yerinde, değişiklik yapmanıza gerekyok,  26 yazıp enter yapmanız yeterli.
+> Download binary - İkiliyi indir
 
 ```
-wget -q -O crossfi.sh https://raw.githubusercontent.com/CoinHuntersTR/CrossFi/main/crossfi.sh && chmod +x crossfi.sh && ./crossfi.sh
+wget https://github.com/crossfichain/crossfi-node/releases/download/v0.3.0-prebuild3/crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz && tar -xf crossfi-node_0.3.0-prebuild3_linux_amd64.tar.gz
+```
+> Download configs - Yapılandırmaları indirin
+
+```
+git clone https://github.com/crossfichain/testnet.git
+```
+
+> Start node - Node Başlat
+
+```
+./bin/crossfid start --home ./testnet
+```
+
+> Create Wallet - Cüzdan Oluştur
+
+```
+./bin/crossfid --home ./testnet keys add my_validator
 ```
 
 ###  Test cüzdanını ekleme
